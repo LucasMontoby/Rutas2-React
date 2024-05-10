@@ -31,7 +31,8 @@ function Productos(){
       id:3,
       title:"iPhone",
       price:2000,
-      category:"Celulares" 
+      category:"Celulares",
+      thumbnail: ' '
     }])
  }
 
@@ -45,7 +46,8 @@ function Productos(){
     return (
       <div>
         <h1>{titulo}</h1>
-        {productos.map(producto => <Producto id={producto.id} title/>)}
+        {productos.map(producto => <Producto id={producto.id} title={producto.title}
+        price={producto.price} category={producto.category} thumbnail={ producto.thumbnail }/>)}
         <button onClick={filtrar}>Filtrar</button>
       </div>
     )

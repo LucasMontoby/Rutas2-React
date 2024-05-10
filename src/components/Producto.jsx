@@ -5,7 +5,6 @@ function Producto({
     title,
     category,
     price,
-    category_id,
     thumbnail
 }){
     return(
@@ -14,7 +13,6 @@ function Producto({
             <img src={thumbnail}></img>
             <p>{category}</p>
             <p>{price}</p>
-            <p>{category_id}</p>
 
             <button><Link to={`/producto/${id}`}>Ver Detalle</Link></button>
         </div>
